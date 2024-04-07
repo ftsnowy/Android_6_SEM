@@ -1,20 +1,31 @@
 package com.example.calculator;
 
+import android.annotation.SuppressLint;
+import android.hardware.SensorManager;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
 import android.os.Bundle;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, SensorEventListener {
+
+    private SensorManager sensorManager;
+    private Sensor gyroscope;
+
+    private long lastRotationTime = 0;
 
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-
-
+    ConstraintLayout screenLayout;
     Button btn0, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btnPlus, btnMinus, btnMult,
            btnDiv, btnEquals, btnPM, btnC, btnSquare, btnRoot, btnSin, btnCos, btnDot;
 
@@ -24,15 +35,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Calculator calculator = new Calculator();
 
+
+    private GestureDetector gestureDetector;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         findXML();
         setListener();
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        sensorManager.registerListener(this, gyroscope, SensorManager.SENSOR_DELAY_NORMAL);
+    }
+
+    @Override
+    protected void onPause() {
+        sensorManager.unregisterListener(this);
+        super.onPause();
+    }
+
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor == gyroscope) {
+            long currentTime = System.currentTimeMillis();
+            if (currentTime - lastRotationTime > 200) { // Ограничиваем частоту обработки поворотов
+                lastRotationTime = currentTime;
+
+                float[] angularVelocity = event.values;
+
+                // Проверяем, произошел ли быстрый поворот
+                if (Math.abs(angularVelocity[1]) > Math.PI) { // Проверяем угловую скорость вокруг оси Y
+                    clearExpression();
+                }
+            }
+        }
+    }
+
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+    }
 
 
     @Override
@@ -401,8 +452,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCos = findViewById(R.id.btnCos);
         btnRoot = findViewById(R.id.btnRoot);
         expression = findViewById(R.id.expression);
+        screenLayout = findViewById(R.id.screenLayout);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public void setListener(){
         btn0.setOnClickListener(this);
         btn1.setOnClickListener(this);
@@ -463,6 +516,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnCos.setOnClickListener(this);
     }
 
+    public void clearExpression(){
+        currentExpr = "";
+        currentOp = 0;
+        updateExpression();
+    }
+
 
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -480,6 +539,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         currentOp = savedInstanceState.getInt("currentOp");
         updateExpression();
     }
+
+
 
 
 }

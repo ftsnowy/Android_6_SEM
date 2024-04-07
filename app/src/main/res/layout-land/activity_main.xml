@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screenLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -68,14 +69,14 @@
 
     <Button
         android:id="@+id/btnC"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="C"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="C"
         android:textColor="@color/black"
         android:textSize="15sp"
 
@@ -86,14 +87,14 @@
 
     <Button
         android:id="@+id/btn7"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="7"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="7"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -105,17 +106,16 @@
 
     <Button
         android:id="@+id/btn8"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="8"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="8"
         android:textColor="@color/black"
         android:textSize="20sp"
-
 
 
         app:layout_constraintBottom_toTopOf="@+id/lhg2"
@@ -126,14 +126,14 @@
 
     <Button
         android:id="@+id/btn9"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="9"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="9"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -146,14 +146,14 @@
 
     <Button
         android:id="@+id/btn4"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="4"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="4"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -166,13 +166,13 @@
 
     <Button
         android:id="@+id/btn5"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="5"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="5"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -184,14 +184,14 @@
 
     <Button
         android:id="@+id/btn6"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="6"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="6"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -204,14 +204,14 @@
 
     <Button
         android:id="@+id/btn1"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="1"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="1"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg4"
@@ -222,13 +222,13 @@
 
     <Button
         android:id="@+id/btn2"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="2"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="2"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg4"
@@ -239,13 +239,13 @@
 
     <Button
         android:id="@+id/btn3"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="3"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="3"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg4"
@@ -257,14 +257,14 @@
 
     <Button
         android:id="@+id/btnDot"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="."
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="."
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -275,14 +275,14 @@
 
     <Button
         android:id="@+id/btn0"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="0"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="0"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -294,14 +294,14 @@
 
     <Button
         android:id="@+id/btnEquals"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="="
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#FFEB3B"
+        android:text="="
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -314,14 +314,14 @@
 
     <Button
         android:id="@+id/btnPlus"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="+"
 
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="+"
         android:textColor="@color/black"
         android:textSize="20sp"
 
@@ -332,13 +332,13 @@
 
     <Button
         android:id="@+id/btnMinus"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="-"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="-"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg2"
@@ -348,13 +348,13 @@
 
     <Button
         android:id="@+id/btnMult"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="x"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="x"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg3"
@@ -364,13 +364,13 @@
 
     <Button
         android:id="@+id/btnDiv"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="/"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="/"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg3"
@@ -380,13 +380,13 @@
 
     <Button
         android:id="@+id/btnSquare"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="^2"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="^2"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg4"
@@ -396,13 +396,13 @@
 
     <Button
         android:id="@+id/btnRoot"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="sqrt"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="sqrt"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/lhg4"
@@ -416,12 +416,12 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:backgroundTint="#65FD5A"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        android:text="±"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
+        android:backgroundTint="#65FD5A"
+        android:text="±"
+        android:textColor="@color/black"
+        android:textSize="15sp"
 
         app:layout_constraintBottom_toTopOf="@+id/lhg1"
         app:layout_constraintEnd_toStartOf="@+id/lvg2"
@@ -430,13 +430,13 @@
 
     <Button
         android:id="@+id/btnSin"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="sin"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="sin"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -446,21 +446,19 @@
 
     <Button
         android:id="@+id/btnCos"
+        style="@style/Widget.MaterialComponents.Button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="cos"
-        style="@style/Widget.MaterialComponents.Button"
         android:layout_marginStart="4dp"
         android:layout_marginEnd="4dp"
         android:backgroundTint="#65FD5A"
+        android:text="cos"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/lvg2"
         app:layout_constraintTop_toTopOf="@+id/lhg4" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
